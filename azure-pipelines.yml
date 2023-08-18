@@ -3,7 +3,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: ubuntu-latest
 
 steps:
 - task: Maven@4
@@ -11,7 +11,7 @@ steps:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
-    mavenVersionOption: '3.9.4'
+    mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
