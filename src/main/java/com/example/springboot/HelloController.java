@@ -8,7 +8,7 @@ public class HelloController {
 
 	@GetMapping("/")
 	public String index() {
-		return "Happy Learning Friends!";
+		return "Greetings from Spring Boot!";
 	}
 
 }
