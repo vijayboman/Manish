@@ -15,16 +15,3 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/target'
-    Contents: 'spring-boot-complete-0.0.1-SNAPSHOT.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'Copying the Artifcat to Artifficat Directory'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'myartifact'
-    publishLocation: 'Container'
